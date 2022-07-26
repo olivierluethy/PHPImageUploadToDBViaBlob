@@ -14,20 +14,24 @@ if(is_uploaded_file($_FILES['userImage']['tmp_name'])) {
 }
 }
 ?>
-<HTML>
 
-<HEAD>
-    <TITLE>Upload Image to MySQL BLOB</TITLE>
-    <link href="imageStyles.css" rel="stylesheet" type="text/css" />
-</HEAD>
+<!DOCTYPE html>
+<html lang="en">
 
-<BODY>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image to MySQL BLOB</title>
+    <link href="css/imageStyles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
     <form name="frmImage" enctype="multipart/form-data" action="" method="post" class="frmImageUpload">
         <label>Upload Image File:</label><br />
         <input name="userImage" type="file" class="inputFile" />
         <input type="submit" value="Submit" class="btnSubmit" />
     </form>
-    </div>
-</BODY>
+</body>
 
-</HTML>
+</html>
