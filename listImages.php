@@ -22,26 +22,35 @@
 </head>
 
 <body>
-
-    <div class="grid-container">
-        <?php
+    <main>
+        <h1>Fotogallerie</h1>
+        <div class="grid-container">
+            <?php
         if ($rowcount > 0){
             
             while($row = mysqli_fetch_array($result)) {
                 echo "<div class='image'>
                         <img src='imageView.php?image_id= ". $row['imageId'] ."' /><br>
-                        <button onclick='deleteImage(" . $row['imageId'] . ")'>Delete</button>
+                        <button title='Bild löschen' onclick='deleteImage(" . $row['imageId'] . ")'>Delete</button>
                     </div>";
             }
             mysqli_close($conn);
 
         }else {
-            echo "<h1>Es hat keine Bilder</h1>";
+            echo "<h2>Es hat keine Bilder</h2>";
         }
         ?>
-    </div>
+        </div>
 
-    <a href="index.php">Weitere Bilder hochladen</a>
+        <?php
+        if ($rowcount > 0){
+            echo "<a href='index.php'>Weitere Bilder hochladen</a>";
+        }else {
+            echo "<a href='index.php'>Bild hochladen</a>";
+        }
+        ?>
+        
+    </main>
     <script src="js/main.js"></script>
 </body>
 

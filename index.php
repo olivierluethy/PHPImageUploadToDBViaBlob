@@ -26,13 +26,20 @@ if(count($_FILES) > 0) {
 </head>
 
 <body>
-    <form name="frmImage" enctype="multipart/form-data" action="" method="post" class="frmImageUpload">
-        <label>Upload Image File:</label><br />
-        <input name="userImage" type="file" class="inputFile" />
-        <input type="submit" value="Submit" class="btnSubmit" />
-    </form>
-
-    <a href="listImages.php">Alle Bilder anzeigen</a>
+<table>
+  <tr>
+    <td></td>
+    <td>
+        <form name="frmImage" enctype="multipart/form-data" action="" method="post" class="frmImageUpload">
+            <label>Upload Image File:</label><br />
+            <input name="userImage" type="file" class="inputFile" />
+            <input type="submit" value="Submit" class="btnSubmit" />
+        </form>
+        <a class="seeAll" href="listImages.php">Alle Bilder anzeigen</a>
+    </td>
+    <td></td>
+  </tr>
+</table>
 </body>
 
 </html>

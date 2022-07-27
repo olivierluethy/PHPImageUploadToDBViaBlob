@@ -1,34 +1,33 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
-body .grid-container {
+body main {
+  margin-left: 1rem;
+}
+body main .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 10px;
-  background-color: #2196F3;
   padding: 10px;
   grid-template-columns: repeat(auto-fill, 20em);
+  margin-bottom: 2rem;
 }
-body .grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid black;
+body main .grid-container > div {
   text-align: center;
   font-size: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 25px;
 }
-body .image {
-  border: 5px solid green;
-}
-body .image img {
+body main .image img {
   width: 80%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   border: 1px solid #FFFFFF;
   border-radius: 4px;
-  margin-left: 2rem;
   margin-top: 2rem;
 }
-body .image button {
-  margin-left: 2rem;
+body main .image button {
   background-color: red;
   border: 1px solid red;
   color: white;
@@ -37,32 +36,58 @@ body .image button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  margin-bottom: 1rem;
   transition-duration: 0.4s;
   cursor: pointer;
 }
-body .image button:hover {
+body main .image button:hover {
   background-color: white;
   color: red;
 }
-
-.frmImageUpload {
-  background-color: #F9D735;
-  width: 400px;
-  padding: 10px;
+body h1 {
+  margin-left: 0.5rem;
 }
-.frmImageUpload label {
+body h2 {
+  color: red;
+}
+body table {
+  margin-top: 18%;
+  margin-left: auto;
+  margin-right: auto;
+}
+body table tr td .frmImageUpload {
+  margin-bottom: 2rem;
+}
+body table tr td .frmImageUpload label {
   font-weight: bold;
-  color: #A0A0A0;
+  color: black;
+  font-size: 2rem;
 }
-
-.btnSubmit {
+body table tr td .frmImageUpload .btnSubmit {
   background-color: #3FA849;
   padding: 4px;
   border: #3FA849 1px solid;
   color: #FFFFFF;
+  cursor: pointer;
 }
-
-.inputFile {
+body table tr td .frmImageUpload .btnSubmit:hover {
+  background-color: blue;
+  color: white;
+  border: 1px solid blue;
+}
+body table tr td .frmImageUpload .inputFile {
   padding: 3px;
   background-color: #FFFFFF;
+}
+body table tr td .seeAll {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  float: left;
+}
+body a {
+  margin-left: 0.5rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }/*# sourceMappingURL=imageStyles.css.map */
